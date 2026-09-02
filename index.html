@@ -1,112 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="芦屋市・西宮市の夙川・苦楽園エリアを走る配達バイクの広告掲載。月額5,500円、1社限定。">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="芦屋市・西宮市の夙川・苦楽園を走る配達バイク広告。月額5,500円、1社限定。">
 <title>芦屋・西宮を走るバイク広告｜広告主募集</title>
 <style>
+:root{
+  --lime:#d8ee22;
+  --green:#126b43;
+  --pink:#ff4e8a;
+  --yellow:#fff6a8;
+  --ink:#26351e;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:#222;background:#f7f7f2;line-height:1.8}
-a{color:inherit}
-.wrap{max-width:920px;margin:auto;padding:0 20px}
-.hero{background:#fff;padding:34px 0 28px;border-bottom:1px solid #eee}
-.badge{display:inline-block;background:#111;color:#fff;padding:5px 14px;border-radius:999px;font-size:14px;font-weight:700}
-h1{font-size:clamp(30px,6vw,52px);line-height:1.25;margin:16px 0 12px}
-.lead{font-size:19px;margin:0 auto;max-width:760px}
-.price{margin:24px 0;padding:18px;background:#f1f5dc;border-radius:16px;text-align:center}
-.price strong{font-size:34px}
-.price small{display:block;font-size:14px}
-.cta{display:inline-block;background:#111;color:#fff;text-decoration:none;font-weight:700;padding:13px 28px;border-radius:999px;margin-top:12px}
-section{background:#fff;margin:18px 0;padding:28px;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
-h2{font-size:25px;margin:0 0 16px;border-left:6px solid #b9d72b;padding-left:12px}
-h3{margin:20px 0 7px;font-size:19px}
-.photo{width:100%;display:block;border-radius:14px}
-.caption{text-align:center;font-size:13px;color:#666;margin-top:8px}
-.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
-.point{background:#f7f8f3;padding:16px;border-radius:12px}
-.point b{display:block;font-size:17px;margin-bottom:5px}
-.notice{background:#fff7df;border-left:5px solid #e5b300;padding:16px;border-radius:10px}
-.apply{background:#eff8b7;text-align:center}
-.email{font-size:20px;font-weight:700;word-break:break-all}
-footer{text-align:center;padding:30px 20px;color:#666;font-size:13px}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:#dff02a;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.8;
+}
+a{text-decoration:none}
+.container{width:min(960px,92%);margin:auto}
+header{padding:28px 0 16px}
+.logo{
+  display:inline-block;background:#fff;border-radius:999px;padding:7px 18px;
+  color:var(--green);font-weight:900;letter-spacing:.08em;
+}
+.hero{
+  background:#fff;border-radius:28px;padding:34px 7% 30px;
+  box-shadow:0 8px 25px rgba(0,0,0,.10);
+}
+.kicker{font-weight:900;color:var(--green);font-size:16px}
+h1{font-size:clamp(31px,6vw,55px);line-height:1.2;margin:8px 0 14px}
+.hero p{font-size:18px;margin:8px 0}
+.price{
+  margin-top:22px;background:var(--pink);color:#fff;border-radius:20px;
+  padding:17px;text-align:center;
+}
+.price b{font-size:32px}
+.price span{display:block;font-size:14px}
+.btn{
+  display:inline-block;background:#111;color:#fff;padding:12px 26px;
+  border-radius:999px;font-weight:900;margin-top:12px;
+}
+section{
+  background:#fff;border-radius:25px;margin:22px 0;padding:30px 7%;
+  box-shadow:0 7px 20px rgba(0,0,0,.08);
+}
+h2{font-size:28px;line-height:1.35;margin:0 0 16px;color:var(--green)}
+h2:before{content:"●";color:var(--pink);margin-right:9px}
+.photo{width:100%;height:auto;display:block;border-radius:18px;background:#eee}
+.note{
+  background:var(--yellow);border-radius:16px;padding:16px 18px;
+  margin-top:16px;font-size:14px;
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}
+.card{background:#f5f8d8;border-radius:17px;padding:18px}
+.card b{display:block;color:var(--green);font-size:18px}
+.steps{counter-reset:step}
+.step{position:relative;padding:4px 0 4px 46px;margin:10px 0}
+.step:before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;
+  background:var(--pink);color:#fff;text-align:center;font-weight:900;line-height:32px;
+}
+.formbox{background:#f7ffd0;border-radius:20px;padding:20px}
+label{display:block;font-weight:800;margin-top:13px}
+input,textarea{
+  width:100%;padding:13px;border:2px solid #d6dfaa;border-radius:10px;
+  font:inherit;background:#fff;
+}
+textarea{min-height:150px;resize:vertical}
+.required{color:#d22;font-size:12px}
+button{
+  width:100%;border:0;border-radius:999px;padding:15px;margin-top:18px;
+  background:#111;color:#fff;font-size:17px;font-weight:900;cursor:pointer;
+}
+.small{font-size:13px;color:#666}
+footer{text-align:center;padding:10px 0 35px;font-size:13px}
+@media(max-width:600px){
+  .hero,section{padding-left:6%;padding-right:6%}
+  h1{font-size:34px}
+  .price b{font-size:27px}
+}
 </style>
 </head>
 <body>
+<div class="container">
 
-<header class="hero">
-<div class="wrap">
-<span class="badge">広告主 1社限定</span>
-<h1>芦屋・西宮を走る<br>配達バイク広告</h1>
-<p class="lead">芦屋市を中心に、西宮市の夙川・苦楽園エリアを日々走る配達バイクに、あなたのお店・会社の広告を掲載しませんか？</p>
-<div class="price"><strong>月額 5,500円</strong><small>税込・1社限定の広告枠です</small><a class="cta" href="#apply">広告掲載について問い合わせる</a></div>
-</div>
+<header>
+  <div class="logo">やさぞう先生</div>
 </header>
 
-<main class="wrap">
-
-<section>
-<h2>どんな広告なの？</h2>
-<p>このバイクは、日々のデリバリー業務で実際に街を走っています。広告スペースは、バイクの<strong>左側・右側・後方</strong>から見える位置に設けています。走行中だけでなく、配達先や街中で停車している時間にも、広告を見てもらえる可能性があります。</p>
-<p>大型広告とは違い、地域の日常の中を移動する「走る広告」です。広告主は1社だけ。ご希望の会社・お店の広告を、ひとつのバイクに集中して掲載します。</p>
-</section>
-
-<section>
-<h2>実際のバイクはこちら</h2>
-<img class="photo" src="image/bike_ad_space.png" alt="広告スペースを白くした配達バイクの3方向写真">
-<p class="caption">広告スペースを白くした状態です。実際の掲載時には、このスペースに広告を掲載します。</p>
-</section>
-
-<section>
-<h2>走るエリア</h2>
-<p><strong>主な走行エリアは、芦屋市・西宮市の夙川・苦楽園周辺です。</strong></p>
-<p>このエリアを日常的に配達で走ることを活かし、地域で事業をされている会社・店舗だけでなく、芦屋・西宮という地域との接点をつくりたい企業にも広告掲載の機会を提供します。</p>
-<div class="notice">※走行エリア・走行頻度・配達件数は日によって変わります。特定の場所・時間・閲覧回数を保証する広告ではありません。</div>
-</section>
-
-<section>
-<h2>この広告のポイント</h2>
-<div class="points">
-<div class="point"><b>① 1社限定</b>同じバイクに複数社の広告を詰め込まず、1社の広告を掲載します。</div>
-<div class="point"><b>② 月額5,500円</b>小さく始められる料金設定です。</div>
-<div class="point"><b>③ 実際に街を走る</b>配達業務をしながら、芦屋・夙川・苦楽園周辺を走行します。</div>
-<div class="point"><b>④ 長く見てもらう</b>一度だけのチラシ配布ではなく、継続して走ることで接触機会をつくります。</div>
+<div class="hero">
+  <div class="kicker">広告主 1社限定</div>
+  <h1>芦屋・西宮を走る<br>バイク広告</h1>
+  <p><strong>芦屋市・西宮市の夙川・苦楽園周辺を走る配達バイクに、あなたの会社やお店の広告を掲載しませんか？</strong></p>
+  <p>毎日のデリバリー業務で街を走るバイクだからこそできる、地域の暮らしの中に入っていく広告です。</p>
+  <div class="price">
+    <b>月額 5,500円（税込）</b>
+    <span>広告枠は1社限定</span>
+    <a class="btn" href="#contact">広告掲載について問い合わせる</a>
+  </div>
 </div>
+
+<section>
+  <h2>実際に走るバイク</h2>
+  <img class="photo" src="image/bike_ad_space.png" alt="広告スペースを白くした配達バイクの写真">
+  <p class="small">掲載時は、この白い広告スペースに広告を掲載します。左側・右側・後方から見える位置を活用します。</p>
 </section>
 
 <section>
-<h2>広告掲載までの流れ</h2>
-<p><strong>1．お問い合わせ</strong><br>下記メールアドレスから、広告掲載についてお問い合わせください。</p>
-<p><strong>2．広告内容の確認</strong><br>掲載する会社・店舗、広告内容、デザインなどを確認します。</p>
-<p><strong>3．掲載開始</strong><br>広告データ・掲載方法を確認後、広告スペースに掲載して走行を開始します。</p>
+  <h2>どんな広告なの？</h2>
+  <p>この広告は、看板を固定して置いておく広告ではありません。デリバリー業務を行う配達バイクそのものが、街の中を移動する「走る広告」になります。</p>
+  <p><strong>主な走行エリアは、芦屋市と西宮市の夙川・苦楽園周辺。</strong> 日々の配達の中で走行するため、同じ地域の中で継続して広告を見てもらう機会をつくります。</p>
+  <div class="note">※特定の場所・時間・走行回数・広告の閲覧回数を保証するものではありません。天候、配達状況、車両整備などにより走行しない場合があります。</div>
 </section>
 
 <section>
-<h2>掲載料金・条件</h2>
-<p><strong>掲載料金：月額5,500円（税込）</strong></p>
-<p>広告枠は<strong>1社限定</strong>です。掲載期間、広告データの仕様、掲載方法などは、お問い合わせ後に個別にご案内します。</p>
-<p>広告内容によっては掲載をお断りする場合があります。また、天候・車両整備・デリバリー業務などの事情により走行しない日があります。</p>
+  <h2>広告主にとってのポイント</h2>
+  <div class="grid">
+    <div class="card"><b>1社限定</b>複数社の広告を並べず、1社の広告を掲載します。</div>
+    <div class="card"><b>月額5,500円</b>まずは小さく試せる料金設定です。</div>
+    <div class="card"><b>実際に走る</b>配達業務とともに、芦屋・夙川・苦楽園周辺を走行します。</div>
+    <div class="card"><b>継続して見てもらう</b>一度きりではなく、掲載期間中の接触機会をつくります。</div>
+  </div>
 </section>
 
 <section>
-<h2>広告主を募集しています</h2>
-<p>「地域のお店を知ってもらいたい」「芦屋・西宮エリアに広告を出してみたい」「大きな広告費はかけずに試してみたい」――そんな会社・店舗の広告掲載を募集しています。</p>
-<p>まずは、掲載について気軽にお問い合わせください。</p>
+  <h2>掲載までの流れ</h2>
+  <div class="steps">
+    <div class="step"><strong>お問い合わせ</strong><br>下のメールフォームから広告掲載についてご連絡ください。</div>
+    <div class="step"><strong>内容を確認</strong><br>会社・店舗、広告内容、掲載方法などを確認します。</div>
+    <div class="step"><strong>広告を準備</strong><br>掲載する広告データについてご案内します。</div>
+    <div class="step"><strong>掲載開始</strong><br>広告を掲載したバイクで走行を開始します。</div>
+  </div>
 </section>
 
-<section id="apply" class="apply">
-<h2>お問い合わせ・お申し込み</h2>
-<p>広告掲載をご希望の方は、メールでお問い合わせください。</p>
-<p class="email">imu3bbt@gmail.com</p>
-<a class="cta" href="mailto:imu3bbt@gmail.com?subject=バイク広告についてお問い合わせ">メールで問い合わせる</a>
-<p style="font-size:13px;margin-top:16px">件名は「バイク広告についてお問い合わせ」で送信できます。</p>
+<section>
+  <h2>料金・掲載条件</h2>
+  <p><strong>月額5,500円（税込）／1社限定</strong></p>
+  <p>広告枠は1台につき1社を基本とします。掲載期間、広告データの仕様、掲載方法などはお問い合わせ後にご案内します。</p>
+  <p class="small">広告内容によっては掲載をお断りする場合があります。また、走行中の安全を優先するため、広告の内容・大きさ・取り付け方法などに条件があります。</p>
 </section>
 
-</main>
+<section>
+  <h2>広告掲載についてお問い合わせください</h2>
+  <p>「まずは詳しく聞いてみたい」という段階でも大丈夫です。下のフォームに必要事項をご入力ください。</p>
 
-<footer>
-株式会社やさぞう先生<br>
-芦屋市・西宮市（夙川・苦楽園周辺）を走る配達バイク広告
-</footer>
+  <div class="formbox" id="contact">
+    <!-- FormSubmit: 初回送信後にメールアドレスの認証が必要になる場合があります。 -->
+    <form action="https://formsubmit.co/imu3bbt@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="バイク広告へのお問い合わせ">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://goengo.github.io/yasazou-bike-ad/">
+
+      <label for="name">お名前・会社名 <span class="required">必須</span></label>
+      <input id="name" name="お名前・会社名" type="text" required>
+
+      <label for="email">返信用メールアドレス <span class="required">必須</span></label>
+      <input id="email" name="返信用メールアドレス" type="email" required>
+
+      <label for="tel">電話番号（任意）</label>
+      <input id="tel" name="電話番号" type="tel">
+
+      <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+      <textarea id="message" name="お問い合わせ内容" required placeholder="広告掲載について聞きたいことなどをご入力ください。"></textarea>
+
+      <button type="submit">この内容で問い合わせる</button>
+      <p class="small">送信内容は広告掲載のお問い合わせ対応のために利用します。</p>
+    </form>
+  </div>
+</section>
+
+</div>
+<footer>やさぞう先生｜芦屋・西宮を走るバイク広告</footer>
 </body>
 </html>
